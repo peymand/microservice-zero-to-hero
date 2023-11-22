@@ -1,16 +1,20 @@
-package com.peyman.inventoryservice;
-
+package com.peyman.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+/**
+ * Hello world!
+ *
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class InventoryServiceApplication {
+public class ApiGatewayApplication
+{
+    public static void main( String[] args )
+    {
 
-	public static void main(String[] args) {
-		SpringApplication.run(InventoryServiceApplication.class, args);
-	}
-
+        SpringApplication.run(ApiGatewayApplication.class , args);
+    }
 }
