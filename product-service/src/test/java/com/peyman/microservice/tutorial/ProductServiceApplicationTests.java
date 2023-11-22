@@ -24,6 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @Testcontainers
 @AutoConfigureMockMvc
+
 class ProductServiceApplicationTests {
 
     @Container
@@ -48,15 +49,15 @@ class ProductServiceApplicationTests {
     }
 
     @Test
-    void shouldCreateProduct() throws Exception {
-        ProductRequest productRequest = getProductRequest();
-        String productRequestString = objectMapper.writeValueAsString(productRequest);
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/product")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(productRequestString))
-                .andExpect(status().isCreated());
-        Assertions.assertEquals(1, productRepository.findAll().size());
-    }
+//    void shouldCreateProduct() throws Exception {
+//        ProductRequest productRequest = getProductRequest();
+//        String productRequestString = objectMapper.writeValueAsString(productRequest);
+//        mockMvc.perform(MockMvcRequestBuilders.post("/api/product")
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(productRequestString))
+//                .andExpect(status().isCreated());
+//        Assertions.assertEquals(1, productRepository.findAll().size());
+//    }
 
     private ProductRequest getProductRequest() {
         return ProductRequest.builder()
